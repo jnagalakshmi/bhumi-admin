@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 0.5cm;
     font-weight: bold;
-    background-image: url('img/log_bg.jpg'); /* Replace with the path to your image */
+    background-image: url('log_bg.jpg'); /* Replace with the path to your image */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
