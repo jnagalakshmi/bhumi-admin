@@ -10,7 +10,7 @@ body {
     margin: 3.75cm;
     padding: 0;
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
     height:   100%;
 }
