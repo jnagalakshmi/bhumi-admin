@@ -41,7 +41,7 @@ include 'connection.php';
    
 if($_SERVER["REQUEST_METHOD"] == "POST") {
    // username and password sent from form 
-   session_start(); // Start the session
+   //session_start(); //Start the session
    $username = mysqli_real_escape_string($conn,$_POST['username']);
    $password = mysqli_real_escape_string($conn,$_POST['password']); 
    
@@ -52,8 +52,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
    $count = mysqli_num_rows($result);
    if($count == 1) {
-      
-      $_SESSION['username']=$username;
+      //$_SESSION['username']=$username;
       header("Location: admin.php");
    }else {
       echo "Your Login Name or Password is invalid";
