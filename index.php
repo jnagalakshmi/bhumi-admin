@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    if($count == 1) {
       //$_SESSION['username']=$username;
       ob_start();
-      header("Location: admin.php");
+      header("Location:admin.php");
       ob_end_flush();
    }else {
       echo "Your Login Name or Password is invalid";
