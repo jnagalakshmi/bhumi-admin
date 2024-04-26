@@ -1,15 +1,20 @@
 <?php
 // Azure MySQL database connection parameters
-$servername = "agroserver.mysql.database.azure.com";
-$username = "Bhumi";
-$password = "Agriculture1234";
-$db_name = "bhumi";
-
-$conn = new mysqli($servername, $username, $password, $db_name);
+$conn = mysqli_init();
  
-// Check for connection errors
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// Connect to MySQL server without SSL/TLS
+mysqli_real_connect(
+    $conn,
+    "agroserver.mysql.database.azure.com",
+    "bhumi",
+    "Agriculture1234",
+    "bhumi",
+    3306
+);
+ 
+// Check connection
+if (mysqli_connect_errno()) {
+    die("Connection failed: " . mysqli_connect_error());
 }
  
 // Connection successful
