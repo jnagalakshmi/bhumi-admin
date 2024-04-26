@@ -32,7 +32,9 @@
 ini_set('display_errors',  1);
 ini_set('display_startup_errors',  1);
 error_reporting(E_ALL);
+
 include 'connection.php';
+
 if($_SERVER["REQUEST_METHOD"] == "POST") {
    // username and password sent from form 
    //session_start(); //Start the session
@@ -44,9 +46,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $count = mysqli_num_rows($result);
    if($count == 1) {
       //$_SESSION['username']=$username;
-      ob_start();
-      header("Location:admin.php");
-      ob_end_flush();
+      // ob_start();
+      // header("Location:admin.php");
+      // ob_end_flush();
+       echo "login success";
    }else {
       echo "Your Login Name or Password is invalid";
    }
