@@ -124,19 +124,6 @@ if ($resultfertilizers->num_rows >   0) {
     echo "0";
 }
 
-// Query to get the total number of products
-// $sqlFertilizers = "SELECT COUNT(*) FROM product WHERE category = 'Fertilizers' ";
-// $resultFertilizers = $conn->query($sqlFertilizers);
-
-// if ($resultFertilizers->num_rows >  0) {
-//     // Output data of each row
-//     while($row = $resultFertilizers->fetch_assoc()) {
-//         $fertilizers = $row["COUNT(*)"];
-//     }
-// } else {
-//     echo "0";
-// }
-
 // Close the connection
 $conn->close();
 ?>
@@ -190,7 +177,7 @@ $conn->close();
           </div>
           <div class="admin">
             <div class="card">
-              <img src="img/products.jpg">
+              <img src="products.jpg">
               <h4>PRODUCTS</h4>
               
               <div class="per">
@@ -208,7 +195,7 @@ $conn->close();
               
             </div>
             <div class="card">
-              <img src="img/users.jpg">
+              <img src="users.jpg">
               <h4>USERS</h4>
               
               <div class="per">
@@ -226,7 +213,7 @@ $conn->close();
               
             </div>
             <div class="card">
-              <img src="img/orders.png">
+              <img src="orders.png">
               <h4>ORDERS</h4>
               
               <div class="per">
