@@ -28,10 +28,10 @@
                     class="input"
                     required=""
                 />
-<span class="forgot-password"><a href="#">Forgot Password ?</a></span>
+
 <input value="Sign In" type="submit" class="login-button" />
 </form>
-<span class="agreement"><a href="regis1.html">Don't have an account</a></span>
+
 </div>
 </div> 
 </body>
@@ -65,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
       $_SESSION['username']=$username;
       //echo "$username";
     
-      header("Location: ../HomePage1.php");
+      header("Location: ../admin.php");
    } else {
         echo "Your Login Name or Password is invalid";
     }
