@@ -11,7 +11,7 @@
 <div class="main">
 <div class="container">
 <div class="heading">Sign In</div>
-<form class="form" action="login.php" method="post">
+<form class="form" action="index.php" method="post">
 <input
                     placeholder="Username"
                     id="username"
