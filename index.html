@@ -8,32 +8,20 @@
 <link rel="stylesheet" href="login.css">
 </head>
 <body>
-<div class="main">
 <div class="container">
-<div class="heading">Sign In</div>
 <form class="form" action="login.php" method="post">
-<input
-                    placeholder="Username"
-                    id="username"
-                    name="username"
-                    type="username"
-                    class="input"
-                    required=""
-                />
-<input
-                    placeholder="Password"
-                    id="password"
-                    name="password"
-                    type="password"
-                    class="input"
-                    required=""
-                />
-
-<input value="Sign In" type="submit" class="login-button" />
+    <div class="heading">Sign In</div>
+    <div class="input-container">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="input-container">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <input type="submit" value="Login">
 </form>
-
 </div>
 </div> 
 </body>
 </html>
-
