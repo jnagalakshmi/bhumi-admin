@@ -231,7 +231,7 @@ $conn->close();
               
             </div>
             <div class="card">
-              <img src="img/delivery.jpg">
+              <img src="delivery.jpg">
               <h4>DELIVERY AGENTS</h4>
               
               <div class="per">
