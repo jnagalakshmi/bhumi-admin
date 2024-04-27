@@ -9,7 +9,7 @@ if(isset($_POST["submit"])){
   $category = $_POST["category"];
 
   //For uploads photos
-  $upload_dir = "uploads/"; //this is where the uploaded photo stored
+  $upload_dir = ""; //this is where the uploaded photo stored
   $product_image = $upload_dir.$_FILES["imageUpload"]["name"];
   $upload_dir.$_FILES["imageUpload"]["name"];
   $upload_file = $upload_dir.basename($_FILES["imageUpload"]["name"]);
