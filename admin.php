@@ -162,7 +162,7 @@ $conn->close();
               <i class="fas fa-user-circle"></i>
               <span class="nav-item">Users</span>
             </a></li>
-            <li><a href="upload.php">
+            <li><a href="upload.html">
               <i class="fas fa-cart-arrow-down"></i>
               <span class="nav-item">Add Products</span>
             </a></li>
