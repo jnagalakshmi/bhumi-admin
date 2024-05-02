@@ -1,9 +1,9 @@
 <?php
 session_start()
-require_once 'connection.php';
+include 'connection.php';
 
 
-if(isset($_POST["submit"])){
+if($_SERVER["REQUEST_METHOD"] == "POST"){
   $productname = $_POST["productname"];
   $price = $_POST["price"];
   $quantity = $_POST["quantity"];
