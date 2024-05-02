@@ -1,5 +1,9 @@
 <?php
-session_start()
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+session_start();
 include 'connection.php';
 
 
@@ -12,8 +16,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   //For uploads photos
  // $upload_dir = "https://github.com/jnagalakshmi/project/blob/main/"; //this is where the uploaded photo stored
   $product_image = $_FILES["imageUpload"]["name"];
-  $upload_dir.$_FILES["imageUpload"]["name"];
-  $upload_file = $upload_dir.basename($_FILES["imageUpload"]["name"]);
+  //$upload_dir.$_FILES["imageUpload"]["name"];
+  $upload_file = basename($_FILES["imageUpload"]["name"]);
   $imageType = strtolower(pathinfo($upload_file,PATHINFO_EXTENSION)); //used to detected the image format
   $check = $_FILES["imageUpload"]["size"]; // to detect the size of the image
   $upload_ok = 0;
