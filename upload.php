@@ -51,6 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
           if($conn->query($sql) === TRUE){
               echo "<script>alert('your product uploaded successfully')</script>";
+            header("location:admin.php");
           }
       }
   }
