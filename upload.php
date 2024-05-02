@@ -14,14 +14,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $category = $_POST["category"];
 
   //For uploads photos
- // $upload_dir = "https://github.com/jnagalakshmi/project/blob/main/"; //this is where the uploaded photo stored
-  $product_image = $_FILES["imageUpload"]["name"];
-  //$upload_dir.$_FILES["imageUpload"]["name"];
-  $upload_file = basename($_FILES["imageUpload"]["name"]);
+ // // $upload_dir = "https://github.com/jnagalakshmi/project/blob/main/"; //this is where the uploaded photo stored
+ //  $product_image = $_FILES["imageUpload"]["name"];
+ //  $upload_dir.$_FILES["imageUpload"]["name"];
+ //  $upload_file = basename($_FILES["imageUpload"]["name"]);
+ //  $imageType = strtolower(pathinfo($upload_file,PATHINFO_EXTENSION)); //used to detected the image format
+ //  $check = $_FILES["imageUpload"]["size"]; // to detect the size of the image
+ //  $upload_ok = 0;
+
+//For uploads photos
+  $upload_dir = ""; //this is where the uploaded photo stored
+  $product_image = $upload_dir.$_FILES["imageUpload"]["name"];
+  $upload_dir.$_FILES["imageUpload"]["name"];
+  $upload_file = $upload_dir.basename($_FILES["imageUpload"]["name"]);
   $imageType = strtolower(pathinfo($upload_file,PATHINFO_EXTENSION)); //used to detected the image format
   $check = $_FILES["imageUpload"]["size"]; // to detect the size of the image
   $upload_ok = 0;
 
+  
   if(file_exists($upload_file)){
       echo "<script>alert('The file already exist')</script>";
       $upload_ok = 0;
