@@ -1,4 +1,5 @@
 <?php
+session_start()
 require_once 'connection.php';
 
 
@@ -9,8 +10,8 @@ if(isset($_POST["submit"])){
   $category = $_POST["category"];
 
   //For uploads photos
-  $upload_dir = "https://github.com/jnagalakshmi/project/blob/main/"; //this is where the uploaded photo stored
-  $product_image = $upload_dir.$_FILES["imageUpload"]["name"];
+ // $upload_dir = "https://github.com/jnagalakshmi/project/blob/main/"; //this is where the uploaded photo stored
+  $product_image = $_FILES["imageUpload"]["name"];
   $upload_dir.$_FILES["imageUpload"]["name"];
   $upload_file = $upload_dir.basename($_FILES["imageUpload"]["name"]);
   $imageType = strtolower(pathinfo($upload_file,PATHINFO_EXTENSION)); //used to detected the image format
@@ -39,7 +40,7 @@ if(isset($_POST["submit"])){
      echo '<script>alert("sorry your file is doesn\'t uploaded. Please try again")</script>';
   }else{
       if($productname != "" && $price !=""){
-          move_uploaded_file($_FILES["imageUpload"]["tmp_name"],$upload_file);
+          //move_uploaded_file($_FILES["imageUpload"]["tmp_name"],$upload_file);
 
           $sql = "INSERT INTO product(product_name,price,quantity,category,product_image)
           VALUES('$productname',$price,$quantity,'$category','$product_image')";
